@@ -13,7 +13,7 @@ RUN VERSION=${version} PLUGINS=${plugins} GOARCH=${arch} /bin/sh /usr/bin/builde
 #
 # Final stage
 #
-FROM i386/alpine:alpine
+FROM i386/alpine
 LABEL maintainer "Abiola Ibrahim <abiola89@gmail.com>"
 
 LABEL caddy_version="0.10.10"
