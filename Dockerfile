@@ -4,7 +4,7 @@
 #
 FROM abiosoft/caddy:builder as builder
 
-ARG version="0.10.10"
+ARG version="0.10.12"
 ARG plugins="git"
 ARG arch=386
 
@@ -16,7 +16,7 @@ RUN VERSION=${version} PLUGINS=${plugins} GOARCH=${arch} /bin/sh /usr/bin/builde
 FROM i386/alpine
 LABEL maintainer "Abiola Ibrahim <abiola89@gmail.com>"
 
-LABEL caddy_version="0.10.10"
+LABEL caddy_version=${version}
 
 RUN apk add --no-cache openssh-client git
 
