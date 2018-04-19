@@ -4,7 +4,7 @@
 #
 FROM abiosoft/caddy:builder as builder
 
-ARG version="0.10.12"
+ARG version="0.10.13"
 ARG plugins="git"
 ARG arch=386
 
@@ -14,7 +14,7 @@ RUN VERSION=${version} PLUGINS=${plugins} GOARCH=${arch} /bin/sh /usr/bin/builde
 # Final stage
 #
 FROM i386/alpine
-LABEL maintainer "Abiola Ibrahim <abiola89@gmail.com>"
+LABEL maintainer "Graham Benton <docker.domain.gpbenton@xoxy.net>"
 
 LABEL caddy_version=${version}
 
