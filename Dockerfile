@@ -4,7 +4,7 @@
 #
 FROM abiosoft/caddy:builder as builder
 
-ARG version="0.10.14"
+ARG version="0.11.0"
 ARG plugins="git"
 ARG arch=386
 
