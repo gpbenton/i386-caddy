@@ -16,6 +16,7 @@ RUN VERSION=${version} PLUGINS=${plugins} GOARCH=${arch} /bin/sh /usr/bin/builde
 FROM i386/alpine
 LABEL maintainer "Graham Benton <docker.domain.gpbenton@xoxy.net>"
 
+ARG version="0.11.0"
 LABEL caddy_version=${version}
 
 RUN apk add --no-cache openssh-client git
