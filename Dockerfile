@@ -4,11 +4,11 @@
 #
 FROM abiosoft/caddy:builder as builder
 
-ARG version="0.11.0"
+ARG version="0.11.1"
 ARG plugins="git"
 ARG arch=386
 
-RUN VERSION=${version} PLUGINS=${plugins} GOARCH=${arch} /bin/sh /usr/bin/builder.sh
+RUN VERSION=${version} PLUGINS=${plugins} GOARCH=${arch} ENABLE_TELEMETRY=false /bin/sh /usr/bin/builder.sh
 
 #
 # Final stage
@@ -16,7 +16,7 @@ RUN VERSION=${version} PLUGINS=${plugins} GOARCH=${arch} /bin/sh /usr/bin/builde
 FROM i386/alpine
 LABEL maintainer "Graham Benton <docker.domain.gpbenton@xoxy.net>"
 
-ARG version="0.11.0"
+ARG version="0.11.1"
 LABEL caddy_version=${version}
 
 RUN apk add --no-cache openssh-client git
