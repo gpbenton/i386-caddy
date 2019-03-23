@@ -5,3 +5,4 @@ Uses the official caddy builder project https://github.com/abiosoft/caddy-docker
 compatible version of the caddy server http://caddyserver.com.
 
 Note that by using this image you are agreeing to the Let's Encrypt Subsciber agreement at https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf 
+
